@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ameya Ingale - Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    let currentIndex = 0;
+    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
+
+    function showImage(index) {
+      const img = document.getElementById('slideshow');
+      img.src = images[index];
+      currentIndex = index;
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h1>About Me</h1>
+      <p>
+        🚀 Seeking an Internship Opportunity in AI & Data Science 🌟 | Open to New Challenges & Growth Opportunities ✨ | Computer Engineering Student
+        <br><br>
+        Greetings! 👋 I'm Ameya Ingale, a passionate Computer Engineering student specializing in AI & Data Science. Eager to apply my skills and delve deeper into the realm of cutting-edge technology, I'm actively seeking an internship opportunity that offers an environment for growth, learning, and hands-on experience.
+        <br><br>
+        🔍 I can code in a multitude of languages including C/C++, Javascript, Java, Python, and HTML/CSS. I also pride myself on being a quick learner and I am eager to explore new technology. I have done courses on full-stack development, Machine Learning, and Power BI.
+        <br><br>
+        💡 What sets me apart? I'm not just seeking an opportunity; I'm here to contribute, learn, and adapt swiftly. I pride myself on being a quick learner, ready to embrace new challenges and contribute innovative ideas to any team.
+        <br><br>
+        🌱 I'm passionate about continuous learning and honing my skills in AI & Data Science to make meaningful contributions in this ever-evolving field. I'm excited about exploring opportunities where I can merge theoretical knowledge with real-world applications.
+      </p>
+    </section>
+
+    <section id="skills" class="section">
+      <h1>Skills</h1>
+      <p>
+        - AI & Data Science<br>
+        - Full-stack Development<br>
+        - Machine Learning<br>
+        - Power BI<br>
+        - C/C++, Javascript, Java, Python, HTML/CSS
+      </p>
+    </section>
+    
+    <img id="slideshow" class="slideshow" src="image1.jpg">
+    <br>
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+    <p>these are some of my certifications</p>
+
+    <section id="contact" class="section">
+      <h1>Contact Me</h1>
+      <p>
+        🤝 Let's Connect! I'm actively seeking an internship role where I can bring my expertise, enthusiasm, and adaptability to the table. If you're looking for a dedicated and proactive team member, let's explore how I can contribute to your organization's success.
+        <br><br>
+        📧 Feel free to reach out via LinkedIn or at <a href="mailto:hiameyaingale@gmail.com">hiameyaingale@gmail.com</a> to discuss potential collaborations, internship opportunities, or simply to share insights on the exciting world of AI & Data Science. Let's connect and create something remarkable together! 🚀
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Ameya Ingale - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
